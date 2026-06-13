@@ -22,6 +22,13 @@ class Hush < Formula
     end
   end
 
+  on_linux do
+    on_intel do
+      url "https://tap.tritonscaler.com/bin/0.1.0/hush-linux-x86_64"
+      sha256 "88f6781094345bfe74ab58445161f76e6ec70a09681bd5969db494873a7d5366"
+    end
+  end
+
   def install
     bin.install Dir["*"].find { |f| File.file?(f) } => "hush"
   end

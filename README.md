@@ -1,36 +1,27 @@
 # homebrew-tap
 
-Homebrew tap for the **Hush** secrets CLI — login, fetch secrets, and run with injected env. The command (and package) is `shh`.
+> **Homebrew distribution has been retired.** Homebrew casks still trip macOS
+> Gatekeeper — the unsigned binary gets quarantined on download — so Homebrew
+> added friction without benefit. The Hush CLI (`hush`) is now installed via the
+> curl installer below on every platform; curl-installed binaries are **not**
+> Gatekeeper-quarantined.
 
-## Install (macOS)
+The **Hush** secrets CLI — login, fetch secrets, and run with injected env. The
+command is `hush`.
+
+## Install (macOS + Linux)
 
 ```sh
-brew tap sansavision/tap
-brew install shh
+curl -fsSL https://tap.tritonscaler.com/hush | sh
 ```
-
-This is a Homebrew **cask** (a prebuilt binary artifact), so it installs the
-`shh` CLI directly onto your `PATH` **without** Homebrew's Xcode / Command Line
-Tools formula preflight — no compiler toolchain required.
 
 Then verify:
 
 ```sh
-shh --version
+hush --version
 ```
 
-## What this does
-
-`brew install shh` downloads the same prebuilt macOS binary the curl installer
-serves from `tap.tritonscaler.com`, verifies its `sha256`, and installs it as
-`shh` on your `PATH`. Both Apple Silicon (`arm64`) and Intel (`x86_64`) Macs are
-supported.
-
-## Linux / non-Homebrew install
-
-Homebrew casks are macOS-only. On Linux (or to skip Homebrew entirely), use the
-installer:
-
-```sh
-curl -fsSL https://tap.tritonscaler.com/shh | sh
-```
+The installer detects your OS/arch, downloads the matching prebuilt `hush`
+binary from `tap.tritonscaler.com`, verifies its `sha256`, and installs it onto
+your `PATH`. Apple Silicon (`arm64`) + Intel (`x86_64`) macOS and `x86_64`
+(glibc) Linux are supported.

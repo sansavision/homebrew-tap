@@ -8,24 +8,24 @@
 class Hush < Formula
   desc "Hush secrets CLI — login, fetch secrets, and run with injected env"
   homepage "https://hush.tritonscaler.com"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://tap.tritonscaler.com/bin/0.1.0/hush-darwin-arm64"
-      sha256 "af16970f08a763cd15b2cadd0a8296d7194a87bc70138d15df76eb7768e55525"
+      url "https://tap.tritonscaler.com/bin/0.1.1/hush-darwin-arm64"
+      sha256 "faa8f742add7e0043bf1ea4b1c20729c19c957eeaf625d92a9400f0b2ca7489a"
     end
     on_intel do
-      url "https://tap.tritonscaler.com/bin/0.1.0/hush-darwin-x86_64"
-      sha256 "c1ff5647b99d2f87b7950f3385c8892dc3ed66db824b1e0ff182e31f9b1331b0"
+      url "https://tap.tritonscaler.com/bin/0.1.1/hush-darwin-x86_64"
+      sha256 "dfda7ad7224bffdbf587bd363075816d9a537539904b4b2ebf60c1fa67a15907"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://tap.tritonscaler.com/bin/0.1.0/hush-linux-x86_64"
-      sha256 "88f6781094345bfe74ab58445161f76e6ec70a09681bd5969db494873a7d5366"
+      url "https://tap.tritonscaler.com/bin/0.1.1/hush-linux-x86_64"
+      sha256 "24b600ae87e5051cd831aaad118c1af5d19aacf5c2fecee96e7f13b153ae1e12"
     end
   end
 
